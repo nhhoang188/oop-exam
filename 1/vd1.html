@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript class further exercises</title>
+</head>
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<body>
+
+</body>
+
+<script>
+    let MyDate = function (day, month, year) {
+
+        this.day = day;
+
+        this.month = month;
+
+        this.year = year;
+        this.setDay = function(day) {
+            this.day  = day;
+        }
+        this.setMonth = function(month) {
+            this.month  = month;
+        }
+        this.setYear = function(year) {
+            this.year  = year;
+        }
+        this.info = function (){
+            alert(this.day+ '/' + this.month + '/' + this.year)
+        }
+
+    };
+    let date = new MyDate(2, 2, 2007);
+    date.setDay(1);
+    date.setMonth(1);
+    date.setYear(1222);
+    date.info();
+</script>
+</html>
+
